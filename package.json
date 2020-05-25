@@ -1,0 +1,43 @@
+{
+  "name": "eleventy-plugin-responsive-picture",
+  "version": "1.0.0",
+  "description": "A plugin that provides shortcodes for converting images to responsive <picture> elements",
+  "keywords": [
+    "11ty",
+    "eleventy",
+    "eleventy-plugin",
+    "responsive",
+    "image",
+    "picture"
+  ],
+  "main": ".eleventy.js",
+  "repository": "https://github.com/aimee-gm/eleventy-plugin-responsive-picture.git",
+  "author": "Aimee Gamble-Milner (https://github.com/aimee-gm)",
+  "license": "MIT",
+  "files": [
+    "/.eleventy.js"
+  ],
+  "scripts": {
+    "lint": "eslint",
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "mocha": "^7.1.2",
+    "prettier": "^2.0.5",
+    "sinon": "^9.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  }
+}
